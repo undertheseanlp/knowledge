@@ -19,7 +19,7 @@ services:
     ports:
      - "8181:80"
     volumes:
-      - mediawiki-images-data:/var/www/html/images
+      - ./mediawiki-images-data:/var/www/html/images
     depends_on:
     - mysql
     networks:
@@ -30,7 +30,7 @@ services:
     image: mariadb
     restart: always
     volumes:
-      - mediawiki-mysql-data:/var/lib/mysql
+      - ./mediawiki-mysql-data:/var/lib/mysql
     environment:
       MYSQL_DATABASE: 'my_wiki'
       MYSQL_USER: 'wikiuser'
@@ -61,7 +61,7 @@ services:
       context: ./wdqs/0.2.5
       dockerfile: Dockerfile
     volumes:
-      - query-service-data:/wdqs/data
+      - ./query-service-data:/wdqs/data
     command: /runBlazegraph.sh
     networks:
       default:

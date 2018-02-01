@@ -1,23 +1,12 @@
-## wikibase-docker
+## Vietnamese Knowledge Base
 
-This repo contains images needed to setup wikibase and a query service using Docker.
+Powered by [wikibase-docker](https://github.com/wmde/wikibase-docker)
 
-### Issue tracking
+## Run
 
-We use [Phabricator to track
-issues](https://phabricator.wikimedia.org/maniphest/task/edit/form/1/?projects=wikibase-containers). See the [list of current issues](https://phabricator.wikimedia.org/maniphest/?project=wikibase-containers&statuses=open&group=none&order=newest#R).
+```
+cd compose
+docker-compose up
+```
 
-### Images
-
-Image name               | Description   | README
------------------------- | ------------- | ----------
-[`wikibase/wikibase`](https://store.docker.com/community/images/wikibase/wikibase) | MediaWiki with the Wikibase extension| [README](https://github.com/wmde/wikibase-docker/blob/master/wikibase/README.md)
-[`wikibase/wdqs`](https://store.docker.com/community/images/wikibase/wdqs) | Blazegraph SPARQL query service backend | [README](https://github.com/wmde/wikibase-docker/blob/master/wdqs/README.md)
-[`wikibase/wdqs-proxy`](https://store.docker.com/community/images/wikibase/wdqs-proxy) | Proxy to make the query service READONLY and enforce query timeouts | [README](https://github.com/wmde/wikibase-docker/blob/master/wdqs-proxy/README.md)
-[`wikibase/wdqs-frontend`](https://store.docker.com/community/images/wikibase/wdqs-frontend) | UI for the SPARQL query service | [README](https://github.com/wmde/wikibase-docker/blob/master/wdqs-frontend/README.md)
-
-### Docker compose example
-
-This repo contains an example docker compose setup for wikibase.
-
-[README](https://github.com/wmde/wikibase-docker/blob/master/README-compose.md)
+Go to [http://localhost:8181](http://localhost:8181)
