@@ -1,6 +1,6 @@
 # Knowledge
 
-Thống kê
+11917 địa điểm
 
 ```
 Tỉnh / Thành Phố      63
