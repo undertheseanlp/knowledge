@@ -3,3 +3,5 @@
 mediawiki-mysql-data
 mediawiki-images-data
 query-service-data
+
+__pycache__
